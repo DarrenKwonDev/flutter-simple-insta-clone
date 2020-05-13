@@ -17,7 +17,10 @@ class _TabPageState extends State<TabPage> {
       });
     }
 
+    List _pages = [Text("home"), Text("search"), Text("user")];
+
     return Scaffold(
+      body: Center(child: _pages[_selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
           onTap: _onItemTapped,
           currentIndex: _selectedIndex,
