@@ -8,6 +8,7 @@ class RootPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // return TabPage();
     return StreamBuilder<FirebaseUser>(
+      stream: FirebaseAuth.instance.onAuthStateChanged,
       builder: (BuildContext context, AsyncSnapshot<FirebaseUser> snapshot) {
         if (snapshot.hasData) {
           return TabPage(snapshot.data);

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class AccountPage extends StatefulWidget {
   @override
@@ -79,7 +81,9 @@ class _AccountPageState extends State<AccountPage> {
       actions: <Widget>[
         IconButton(
           icon: Icon(Icons.exit_to_app),
-          onPressed: () {},
+          onPressed: () {
+            FirebaseAuth.instance.signOut();
+          },
         )
       ],
     );

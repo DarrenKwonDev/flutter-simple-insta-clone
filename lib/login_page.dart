@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:flutter_simple_insta_clone/tab_page.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -20,6 +21,9 @@ class LoginPage extends StatelessWidget {
             SignInButton(Buttons.Google, onPressed: () {
               _handleSignIn().then((user) {
                 print(user);
+                print(user);
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => (TabPage(user))));
               });
             })
           ],
