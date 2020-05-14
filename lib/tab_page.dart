@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'account_page.dart';
 
 class TabPage extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _TabPageState extends State<TabPage> {
       });
     }
 
-    List _pages = [HomePage(), Text("search"), Text("user")];
+    List _pages = [HomePage(), Text("search"), AccountPage()];
 
     return Scaffold(
       body: Center(child: _pages[_selectedIndex]),
