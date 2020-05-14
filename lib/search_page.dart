@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+import 'create_page.dart';
+
 class SerachPage extends StatefulWidget {
   @override
   _SerachPageState createState() => _SerachPageState();
@@ -32,7 +34,10 @@ class _SerachPageState extends State<SerachPage> {
     return Scaffold(
       body: buildBody(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => CreatePage()));
+        },
         backgroundColor: Colors.blueAccent,
         child: Icon(Icons.create),
       ),
